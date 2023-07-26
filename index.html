@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Weather_TS</title>
+  <title>Amma</title>
   <link href="weather.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
 
 <style>
 html {
@@ -24,21 +25,23 @@ html {
     display: inline;
 }
 
+
 #bharo1{
-    font-size: xx-large;
+    font-size:2.5rem;
     font-weight:bolder;
     font-family: 'Exo 2', sans-serif;
 }
 #city{
     /* border: ; */
     border: 3px solid black;
+    width: 50%;
 }
 #heading{
     text-align: center;
     padding: 1.5rem;
     border: 5px solid black;
     background-color: rgb(255, 49, 49);
-    font-size: x-large;
+    font-size:1.8rem;
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -48,11 +51,11 @@ html {
     padding: 1.5rem;
     border: 5px solid black;
     background-color: rgb(224, 176, 255);
-    margin: 3rem 25rem;
+    margin: 3rem 10rem;
 }
 
 #waah{
-        font-size:1.5rem;
+    font-size:1.5rem;
 }
 #city{
     font-size:x-large;
@@ -99,6 +102,7 @@ html {
     */
 }
 #output2{
+    /* height: 35rem; */
     background-color: #7CFC00;
     border: 2px solid black;
     padding: 0.5rem 1rem;
@@ -126,11 +130,11 @@ html {
     font-family: 'Exo 2', sans-serif;
     font-size:3rem;
     font-weight:500;
-
+    
 }
 
 
-#submit1{  
+#submit1{
     font-size:1.2rem;
     font-family: 'Exo 2', sans-serif;
     font-weight:bolder;
@@ -143,27 +147,69 @@ html {
     color: white;
 }
 
+
 /* Styles for mobile devices (up to 767px) */
-@media (max-width: 767px) {
-    #results{
-        background-color: brown;
+/* Styles for mobile devices (up to 1600px) */
+@media (max-width: 1000px) {
+    /* Center the container and entry */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    /* Your mobile styles here */
+    
+    /* Update the container width and margin */
+    .container {
+      width: 98%;
+      margin: 10px;
+    }
+    #results{
+        display: block;
+    }
+  
+    /* Center the entry form and reduce the margin */
+    #entry {
+      text-align: center;
+      padding: 1.5rem;
+      border: 5px solid black;
+      background-color: rgb(224, 176, 255);
+      margin: 1rem;
+      width: 90%;
+    }
+  
+    /* Adjust the width of the city input field and submit button */
+    #city {
+      width: 80%;
+      max-width: 400px;
+    }
+  
+    #submit1 {
+      max-width: 150px;
+    }
+    
+    /* Adjust the font size for better mobile display */
+    #bharo1 {
+      font-size: 2rem;
+    }
+    
+    #heading {
+      font-size: 1.5rem;
+    }
+  
+    #output1, #output2 {
+      font-size: 2rem;
+    }
   }
-  
-  /* Styles for tablets and larger screens (768px and above) */
-  @media (min-width: 768px) {
-    /* Your tablet and larger screen styles here */
-  }
-  
-  
   
 </style>
-
 
 </head>
 
 <body>
+  <div class="container">
   <div id="heading">
     <h1 id="up">Know the Weather of your City...</h1>
   </div>
@@ -192,6 +238,7 @@ html {
     <pre  id="output2">Sky Condition<br>Temperature <br>Wind Direction <br> Speed <br> Day/Night <br> UV Index VAlue</pre>
   </pre>
   </div>
+</div>
 
 
   <script>
