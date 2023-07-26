@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Amma</title>
+  <link href="weather.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+html {
+    height: 100%;
+    width: 100%;
+}
+
+*{
+    margin: 5px 0px;
+    
+}
+.p{
+    display: inline;
+}
+
+#bharo1{
+    font-size: xx-large;
+    font-weight:bolder;
+    font-family: 'Exo 2', sans-serif;
+}
+#city{
+    /* border: ; */
+    border: 3px solid black;
+}
+#heading{
+    text-align: center;
+    padding: 1.5rem;
+    border: 5px solid black;
+    background-color: rgb(255, 49, 49);
+    font-size: x-large;
+    font-family: 'Exo 2', sans-serif;
+}
+
+
+#entry{
+    text-align: center; 
+    padding: 1.5rem;
+    border: 5px solid black;
+    background-color: rgb(224, 176, 255);
+    margin: 3rem 25rem;
+}
+
+#waah{
+        font-size:1.5rem;
+}
+#city{
+    font-size:x-large;
+}
+
+
+
+#results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo 2', sans-serif;
+    gap: 1.5rem;
+    border: 2px solid black;
+    margin: 0px 5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
+    background-color: #FAA0A0 ;
+    /* padding: 1rem; */
+    
+    
+    /* Adds a little gap between the two elements */
+    /* height: 100vh; This will center the elements vertically */
+    /* background-color: rgb(15, 255, 80); */
+    /* height: 29rem;
+    text-align: center; 
+    padding: 1.5rem;
+    border: 5px solid black;
+    background-color: rgb(15, 255, 80);
+    margin: 3rem 20rem; */
+}
+#output1{
+    background-color: #FDDA0D ;
+    border: 2px solid black;
+    font-family: 'Exo 2', sans-serif;
+    font-size:3rem;
+    font-weight:500;
+    /* height: 29rem;
+    text-align: center; 
+    padding: 1.5rem;
+    border: 5px solid black;
+    background-color: rgb(15, 255, 80);
+    margin: 3rem 20rem;
+    */
+}
+#output2{
+    background-color: #7CFC00;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    font-family: 'Exo 2', sans-serif;
+    font-size:3rem;
+    font-weight:500;
+    /* height: 29rem;
+    text-align: center; 
+    padding: 1.5rem;
+    border: 5px solid black;
+    background-color: rgb(15, 255, 80);
+    margin: 3rem 20rem;
+    font-weight:bolder; */
+    
+}
+
+#tem{
+    font-family: 'Exo 2', sans-serif;
+    font-size:3rem;
+    font-weight:500;
+    
+}
+
+#loc{
+    font-family: 'Exo 2', sans-serif;
+    font-size:3rem;
+    font-weight:500;
+
+}
+
+
+#submit1{  
+    font-size:1.2rem;
+    font-family: 'Exo 2', sans-serif;
+    font-weight:bolder;
+    padding: 0.5rem 1.2rem;
+    color:black;
+    background-color: rgb(224, 176, 255);
+}
+#submit1:hover{
+    background-color:rgb(89, 84, 84);
+    color: white;
+}
+
+/* Styles for mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    #results{
+        background-color: brown;
+    }
+    /* Your mobile styles here */
+  }
+  
+  /* Styles for tablets and larger screens (768px and above) */
+  @media (min-width: 768px) {
+    /* Your tablet and larger screen styles here */
+  }
+  
+  
+  
+</style>
+
+
+</head>
+
+<body>
+  <div id="heading">
+    <h1 id="up">Know the Weather of your City...</h1>
+  </div>
+
+  <div id="entry">
+    <p>
+    <form id="myForm">
+      <!-- <label for="city">City:</label> -->
+      <p id="bharo1">Enter the City.</p>
+      <p id="bharo2"><input type="text" id="city" name="city" /></p>
+
+      <button id="submit1" type="submit">Submit</button>
+    </form>
+    </p>
+
+  </div>
+
+  <div id="results">
+    <div id="one">
+      <h1 id="loc">Location</h1>
+      <pre id="output1"> Country <br> City <br> Time <br> Date <br> Latitude <br> Longitude <br> Time Zone</pre>
+    </div>
+    <div id="two"></div>
+    <pre>
+    <h1 id="tem">Weather Reports</h1>
+    <pre  id="output2">Sky Condition<br>Temperature <br>Wind Direction <br> Speed <br> Day/Night <br> UV Index VAlue</pre>
+  </pre>
+  </div>
+
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const formDataObject = {};
+
+      // Convert form data to a JSON object
+      formData.forEach((value, key) => {
+        formDataObject[key] = value;
+      });
+
+      // Display form data in a new section
+      let x = `${JSON.stringify(formDataObject, null, 2)}`;
+      
+      const jsonObject = JSON.parse(x);
+
+      let join2 = jsonObject.city;
+      console.log(join2);
+
+      let sindex = join2.indexOf(" ");
+      if (sindex !== -1) {
+        console.log(sindex);
+        join2 = join2.substring(0, sindex) + "_" + join2.substring(sindex + 1, join2.length);
+      }
+
+      console.log(join2);
+      let join1 = "https://api.weatherapi.com/v1/current.json?key=02ae428d8b1f41b7b7c165948232307%20&q=";
+      let join = join1 + join2 + "";
+      // console.log(join);
+      // console.log(typeof(join));
+      fetch(join)
+        .then((apidata) => {
+          return apidata.json();
+        })
+        .then((actualdata) => {
+
+          console.log(actualdata.current);
+          const krishna = JSON.stringify(actualdata.location);
+          const locationObj = JSON.parse(krishna);
+          const ram = JSON.stringify(actualdata.current);
+          const weatherObj = JSON.parse(ram);
+          // const shiv=JSON.stringify(weatherObj.current);
+          // const detail=JSON.parse(shiv);
+
+          const countryName = locationObj.country;
+          const cityname = locationObj.name;
+          const timezone = locationObj.tz_id;
+          const latitude = locationObj.lat;
+          const longitude = locationObj.lon;
+          const localdatetime = locationObj.localtime;
+          
+          let sabkuch = ` Country Name:  ${countryName}\n City:${cityname}\n Time:${localdatetime.substring(10)}\n Date:${localdatetime.substring(0, 10)}\n Latitude:${latitude}\n Longitude:${longitude}\n Time Zone:${timezone} `;
+          console.log(sabkuch);
+
+          
+          const celsius = weatherObj.temp_c;
+          const wind_direction = weatherObj.wind_dir;
+          const speed = weatherObj.wind_kph;
+          const isday = weatherObj.is_day;
+          const UV = weatherObj.uv;
+          var gadbad = weatherObj.condition;
+          gadbad = JSON.stringify(gadbad);
+          console.log(gadbad);
+          // console.log(typeof(gadbad));
+          gadbad = gadbad.substring(9);
+          let chop = gadbad.indexOf("\"");
+          console.log(chop);
+          gadbad = gadbad.substring(0, chop)
+          console.log(gadbad);
+          
+
+
+          if (isday == 0) {
+            var ujala = "NIGHT";
+          }
+          else {
+            ujala = "DAY";
+          }
+          let bakisab = `Condition of Sky = ${gadbad}\nTemperature in Celsius = ${celsius}\nWind Direction is from ${wind_direction}\nSpeed of the wind is ${speed} km\\hr\nPresently its "${ujala}" at ${join2}\nUV Index Value from (1-10) is ${UV}\n`;
+
+
+          
+          console.log(bakisab + "\n\n\n" + sabkuch);
+          
+          
+          const tarun = document.getElementById("output1");
+          const prakhar = document.getElementById("output2");
+          
+          
+          tarun.innerHTML = sabkuch;
+          prakhar.innerHTML = bakisab;
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+    });
+  </script>
+</body>
+
+</html>
+
+<!-- 
+// console.log("Country Name:", countryName);
+// console.log("City:", cityname);
+// console.log("Time Zone:", timezone);
+// console.log("Latitude:", latitude);
+// console.log("Longitude:", longitude);
+// console.log("Date:", localdatetime.substring(0,10));
+// console.log("Time:", localdatetime.substring(10)); -->
