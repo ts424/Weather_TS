@@ -9,12 +9,12 @@ The Weather Forecast Application is a simple and user-friendly web application t
 **Location Information:** Displays geographical details such as country, city, time, date, latitude, longitude, and time zone.
 **Responsive Design:** Ensures a seamless user experience across various devices with responsive styling.
 
-##Technologies Used
+## Technologies Used
 **HTML:** Markup language for creating the structure of the web page.
 **CSS:** Styling language for designing the layout and appearance of the application.
 **JavaScript:** Programming language for fetching data from the API and dynamically updating the web page content.
 **OpenWeather API:** Third-party API for retrieving weather information
 
 
-##Contact
+## Contact
 For any questions or suggestions, feel free to reach out to [ts424@snu.edu.in](ts424@snu.edu.in).
