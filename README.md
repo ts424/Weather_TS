@@ -1,7 +1,7 @@
 # Weather Forecast Application <sup> [Link](https://ts424.github.io/Weather_TS/) </sup> 
 
 ## Overview
-The Weather Forecast Application is a simple and user-friendly web application that allows users to get real-time weather information for any city around the world. The application uses the OpenWeather API to fetch accurate and up-to-date weather data and displays it in a structured and easy-to-read format.
+The Weather Forecast Application is a simple and user-friendly web application that allows users to get real-time weather and geographical information for any city around the world. The application uses the OpenWeather API to fetch accurate and up-to-date weather data and displays it in a structured and easy-to-read format.
 
 
 
