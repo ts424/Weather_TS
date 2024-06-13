@@ -10,8 +10,10 @@ The Weather Forecast Application is a simple and user-friendly web application t
 **Responsive Design:** Ensures a seamless user experience across various devices with responsive styling.
 
 ## Technologies Used
-**+ HTML:** Markup language for creating the structure of the web page.
-**+ CSS:** Styling language for designing the layout and appearance of the application.
+** HTML:** Markup language for creating the structure of the web page.
+
+** CSS:** Styling language for designing the layout and appearance of the application.
+
 **JavaScript:** Programming language for fetching data from the API and dynamically updating the web page content.
 **OpenWeather API:** Third-party API for retrieving weather information
 
