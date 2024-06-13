@@ -15,6 +15,8 @@ The Weather Forecast Application is a simple and user-friendly web application t
 **JavaScript:** Programming language for fetching data from the API and dynamically updating the web page content.
 **OpenWeather API:** Third-party API for retrieving weather information
 
+
+
 ![Weather_TS](https://github.com/ts424/Weather_TS/assets/89158382/e7842f4f-e08f-4327-a4e6-72f3b4bbc1ee)
 
 ## Contact
