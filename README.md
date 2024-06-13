@@ -1,9 +1,9 @@
-#Weather Forecast Application
+# Weather Forecast Application
 
-##Overview
+## Overview
 The Weather Forecast Application is a simple and user-friendly web application that allows users to get real-time weather information for any city around the world. The application uses the OpenWeather API to fetch accurate and up-to-date weather data and displays it in a structured and easy-to-read format.
 
-##Features 
+## Features 
 **Real-Time Weather Data:** Fetches current weather data for any city using the OpenWeather API.
 **Detailed Weather Reports:** Provides detailed information including temperature, sky condition, wind speed and direction, UV index, and day/night status.
 **Location Information:** Displays geographical details such as country, city, time, date, latitude, longitude, and time zone.
