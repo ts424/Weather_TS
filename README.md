@@ -16,6 +16,7 @@ The Weather Forecast Application is a simple and user-friendly web application t
 **CSS:** Styling language for designing the layout and appearance of the application.<br>
 **JavaScript:** Programming language for fetching data from the API and dynamically updating the web page content.<br>
 **OpenWeather API:** Third-party API for retrieving weather information.<br>
+
 ---
 
 
